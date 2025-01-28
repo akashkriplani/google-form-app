@@ -1,0 +1,26 @@
+{
+  "name": "google-form-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:html": "html-minifier src/index.html --collapse-whitespace --remove-comments --minify-css true --output dist/index.html",
+    "build:css": "cleancss -o dist/styles.css src/styles.css",
+    "build:js": "tsc && terser dist/main.js -o dist/main.js",
+    "build": "npm run build:html && npm run build:css && npm run build:js",
+    "start": "http-server dist -c-1 -o index.html -p 4200",
+    "watch": "nodemon --watch 'src/**/*.ts' --exec 'npm run build && npm start'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.9",
+    "terser": "^5.37.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
