@@ -1,5 +1,6 @@
 {
   "name": "google-form-app",
+  "homepage": "https://akashkriplani.github.io/google-form-app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
